@@ -23,7 +23,12 @@
     
     <!-- <comment ng-repeat="comment in comments" data="comment"></comment> -->
     <ul>
-      <li ng-repeat="comment in comments">{{comment}}</li>
+      <div class="media" ng-repeat="comment in comments">
+        <div class="media-body">
+          <h4 class="media-heading">{{comment.user_name}}</h4>
+          {{comment.body}}
+        </div>
+      </div>
     </ul>
 
     <form class="form-horizontal">

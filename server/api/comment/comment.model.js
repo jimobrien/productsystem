@@ -6,7 +6,8 @@ var mongoose = require('mongoose'),
 var CommentSchema = new Schema({
   name: String,
   body: String,
-  product_id: String
+  product_id: String,
+  user_name: String
 });
 
 module.exports = mongoose.model('Comment', CommentSchema);

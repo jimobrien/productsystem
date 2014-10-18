@@ -21,6 +21,12 @@ angular.module('productsystemApp')
               .then(function(comments){
                 return comments;
               });
+          },
+          user: function(Auth) {
+            return Auth.getCurrentUser().$promise
+              .then(function(res){
+                return res
+              });
           }
         }
       });

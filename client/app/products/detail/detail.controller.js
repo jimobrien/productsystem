@@ -1,14 +1,15 @@
 'use strict';
 
 angular.module('productsystemApp')
-  .controller('DetailCtrl', function ($scope, product, comments, Comments) {
+  .controller('DetailCtrl', function ($scope, product, comments, user, Comments) {
     $scope.product = product;
     $scope.comments = comments;
 
-    $scope.newComment = {
+    $scope.newComment = {     
+      user_name: user.name,
       product_id: $scope.product._id
     };
-
+    
     $scope.addComment = function () {
       Comments.save($scope.newComment).$promise
         .then(function(res){
@@ -18,6 +19,7 @@ angular.module('productsystemApp')
 
           //reset comment
           $scope.newComment = {
+            user_name: user.name,
             product_id: $scope.product._id
           }
         });
