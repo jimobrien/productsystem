@@ -7,6 +7,7 @@ angular.module('productsystemApp')
         url: '/products/:id',
         templateUrl: 'app/products/detail/detail.html',
         controller: 'DetailCtrl',
+        authenticate: true,
         resolve: {
           // query product details
           product: function(Products, $stateParams) {

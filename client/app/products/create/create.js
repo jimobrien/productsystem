@@ -6,6 +6,7 @@ angular.module('productsystemApp')
       .state('create', {
         url: '/products/create',
         templateUrl: 'app/products/create/create.html',
+        authenticate: true,
         controller: 'CreateCtrl'
       });
   });
