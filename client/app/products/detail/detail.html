@@ -19,6 +19,33 @@
   </section>
 
   <section id="comments">
-        
+    <h3> Comments </h3> 
+    
+    <!-- <comment ng-repeat="comment in comments" data="comment"></comment> -->
+    <ul>
+      <li ng-repeat="comment in comments">{{comment}}</li>
+    </ul>
+
+    <form class="form-horizontal">
+      <legend> Add A Comment</legend>
+      <fieldset>
+        <!-- Textarea -->
+        <div class="form-group">
+          <label class="col-md-1 control-label" for="Comment">Comment</label>
+          <div class="col-md-4">                     
+            <textarea id="Comment" ng-model="newComment.body" name="Comment" class="form-control" ></textarea>
+          </div>
+        </div>
+
+        <!-- Button (Double) -->
+        <div class="form-group">
+          <label class="col-md-1 control-label" for="Comment"></label>
+          <div class="col-md-8">
+            <button id="Comment" name="Comment" class="btn btn-success" ng-click="addComment()">Comment</button>
+          </div>
+        </div>
+
+      </fieldset>
+    </form>       
   </section>
 </div>

@@ -1,16 +1,8 @@
 'use strict';
 
 angular.module('productsystemApp')
-  .factory('Comments', function () {
-    // Service logic
-    // ...
-
-    var meaningOfLife = 42;
-
-    // Public API here
-    return {
-      someMethod: function () {
-        return meaningOfLife;
-      }
-    };
+  .factory('Comments', function ($resource) {
+    return $resource('/api/comments/:dest/:product_id', {}, {
+      query: {method: 'GET', params: {dest: 'product'}, isArray: true}
+    });
   });

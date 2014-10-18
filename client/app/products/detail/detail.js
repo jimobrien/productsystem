@@ -14,6 +14,13 @@ angular.module('productsystemApp')
               .then(function(product){
                 return product;
               })
+          },
+          // query product comments
+          comments: function(Comments, $stateParams) {
+            return Comments.query({product_id: $stateParams.id }).$promise
+              .then(function(comments){
+                return comments;
+              });
           }
         }
       });

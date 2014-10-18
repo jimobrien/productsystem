@@ -11,6 +11,16 @@ exports.index = function(req, res) {
   });
 };
 
+
+// Get list of comments for product
+exports.showForProduct = function(req, res) {
+  Comment.find({product_id: req.params.id}, function (err, comments) {
+    if(err) { return handleError(res, err); }
+    return res.json(200, comments);
+  })
+};
+
+
 // Get a single comment
 exports.show = function(req, res) {
   Comment.findById(req.params.id, function (err, comment) {
