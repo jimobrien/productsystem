@@ -12,7 +12,7 @@
 - I went with yeoman and [angular-fullstack](https://github.com/DaftMonk/generator-angular-fullstack) to scaffold out as much as possible. Given the time constraint, it made sense to avoid writing as much boilerplate as possible. I'm not a huge fan of the project structure that the angular-fullstack generator enforces ([this is better imo](https://github.com/johnpapa/angularjs-styleguide)) but it was a compromise I made for agility.
 
 
-
-
 ## Running the project ##
-Clone the repo locally and run `grunt serve` 
+- Clone the repo locally
+- `npm install`
+- `grunt serve` (might need `--force` as I did)
