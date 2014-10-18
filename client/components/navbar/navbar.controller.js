@@ -3,8 +3,8 @@
 angular.module('productsystemApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
-      'title': 'Home',
-      'link': '/'
+      'title': 'Products',
+      'link': '/products'
     }];
 
     $scope.isCollapsed = true;
