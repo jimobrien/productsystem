@@ -1,3 +1,33 @@
 <div class="col-md-12">
-This is the create view.
+  <h1 class="page-header"> Add Product</h1>
+  <form class="form-horizontal">
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="ProductName">Name</label>  
+        <div class="col-md-4">
+          <input id="ProductName" ng-model="newProduct.name" name="ProductName" type="text" placeholder="" class="form-control input-md" required="">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="Price">Price (USD)</label>  
+        <div class="col-md-4">
+          <input id="Price" ng-model="newProduct.price" name="Price" type="text" placeholder="" class="form-control input-md">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="Description">Description</label>
+        <div class="col-md-4">                     
+          <textarea id="Description" ng-model="newProduct.description" name="Description" class="form-control" ></textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="Create"></label>
+        <div class="col-md-8">
+          <button id="Create" name="Create" class="btn btn-success" ng-click="create()">Create</button>
+          <button id="Cancel" name="Cancel" class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+      </div>
+  </form>
 </div>

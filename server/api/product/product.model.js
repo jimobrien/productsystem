@@ -8,6 +8,7 @@ var ProductSchema = new Schema({
   price: Number,
   active: Boolean,
   createdBy: String,
+  description: String,
   createdAt: {
     type: Date,
     default: Date.now
