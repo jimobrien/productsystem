@@ -19,6 +19,7 @@ Bonus
 
 ## Running the project ##
 - Clone the repo locally
-- Start mongo (`mongod`)
 - `npm install`
+- `bower install`
+- Start mongo (`mongod`)
 - `grunt serve` (might need `--force` as I did)
