@@ -6,6 +6,14 @@ angular.module('productsystemApp')
       .state('products', {
         url: '/products',
         templateUrl: 'app/products/products.html',
-        controller: 'ProductsCtrl'
+        controller: 'ProductsCtrl',
+        resolve: {
+          products: function(Products) {
+            return Products.query().$promise
+              .then(function(data){
+                return data;
+              });
+          }
+        }
       });
   });

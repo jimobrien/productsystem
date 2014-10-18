@@ -5,8 +5,13 @@ var mongoose = require('mongoose'),
 
 var ProductSchema = new Schema({
   name: String,
-  info: String,
-  active: Boolean
+  price: Number,
+  active: Boolean,
+  createdBy: String,
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
 });
 
 module.exports = mongoose.model('Product', ProductSchema);
